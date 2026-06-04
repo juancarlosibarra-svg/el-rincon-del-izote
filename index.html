@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del Izote | Gastronomía de El Salvador</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">El Rincón del<span> Izote</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Inicio</a>
+                <a href="#nosotros" class="nav-link">Nuestra Historia</a>
+                <a href="#servicios" class="nav-link">Menú Típico</a>
+                <a href="#contacto" class="nav-link">Reservaciones</a>
+            </nav>
+        </div>
+    </header>
+
+ 
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>El verdadero sabor cuscatleco</h1>
+            <p>Disfruta de las mejores pupusas hechas a mano, tamales tradicionales y el auténtico toque casero de El Salvador en un solo lugar.</p>
+            <a href="#contacto" class="btn-cta">Reserva tu Mesa</a>
+        </div>
+    </section>
+
+   
+    <section id="nosotros" class="section-padding">
+        <div class="container">
+            <h2>Nuestra Historia</h2>
+            <div class="nosotros-text">
+                <p>En <strong>El Rincón del Izote</strong> nos apasiona preservar las recetas ancestrales de nuestra tierra. Fundado con el sueño de compartir la calidez de El Salvador, cada platillo es preparado con maíz seleccionado, quesos artesanales e ingredientes frescos traídos directamente de productores locales.</p>
+                <p>Nuestra cocina rinde homenaje a las manos salvadoreñas que, de generación en generación, han mantenido vivo el arte del comal y el sabor de nuestro pulgarcito.</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="servicios" class="section-padding bg-light">
+        <div class="container">
+            <h2>Nuestras Especialidades</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <i class="fas fa-utensils card-icon"></i>
+                    <h3>Pupusas Artesanales</h3>
+                    <p>De maíz o de arroz, rellenas de chicharrón, ayote o las tradicionales de queso con loroco. Acompañadas de curtido y salsa casera.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-leaf card-icon"></i>
+                    <h3>Tamales de Elote y Gallina</h3>
+                    <p>Tamales envueltos en hoja de huerta, cocidos a la leña para conservar ese ahumado tradicional y una textura perfectamente suave.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-mug-hot card-icon"></i>
+                    <h3>Atoles y Antojitos</h3>
+                    <p>Disfruta de un atol chuco o atol de elote caliente, acompañados de empanadas de plátano, canoas o crujiente yuca frita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="contacto" class="section-padding">
+        <div class="container form-container">
+            <h2>Reserva con Nosotros</h2>
+            <p>Planifica tu visita o evento especial. Llena el formulario y te confirmaremos tu espacio en minutos.</p>
+            
+      
+            <div id="form-wrapper">
+                <form id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. María Mendoza">
+                        <span class="error-message" id="error-nombre"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                        <span class="error-message" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalles de la Reserva (Fecha, hora y personas)</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Ej. Sábado 15 de junio, 4 personas, 2:00 PM..."></textarea>
+                        <span class="error-message" id="error-mensaje"></span>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 JCIBARRA El Rincón del Izote - Sabores de El Salvador. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

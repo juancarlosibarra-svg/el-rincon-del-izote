@@ -1,0 +1,332 @@
+
+:root {
+    --primary: #c15c3d;     
+    --accent: #2a6f97;      
+    --dark: #2b2d42;        
+    --light: #fdf6ec;      
+    --white: #ffffff;
+    --error: #d90429;       
+    --success: #2b9348;   
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+/* --- 2. Navbar --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px 0;
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+}
+
+#navbar.scrolled .nav-link, #navbar.scrolled .logo {
+    color: var(--dark);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.logo span { color: var(--primary); }
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover { color: var(--primary); }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#navbar.scrolled .menu-toggle { color: var(--dark); }
+
+/* --- 1. Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(43, 45, 66, 0.7)), 
+                url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn-cta {
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px);
+    background: #a6482e;
+}
+
+/* --- 3. Nosotros --- */
+.nosotros-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* --- 4. Servicios (CSS Grid) --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+    transition: transform 0.3s;
+    border: 1px solid #f0e6df;
+}
+
+.card:hover { 
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(193, 92, 61, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+/* --- 5. Formulario --- */
+.form-container {
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-group input.invalid, .form-group textarea.invalid {
+    border-color: var(--error);
+    background-color: #fff5f5;
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
+    height: 18px;
+}
+
+.btn-submit {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover { background: #1e5270; }
+
+/* Tarjeta Dinámica de Éxito */
+.success-card {
+    background: #eaf4ec;
+    border: 2px dashed var(--success);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(43, 147, 72, 0.1);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.success-card i {
+    font-size: 4rem;
+    color: var(--success);
+    margin-bottom: 20px;
+}
+
+.success-card h3 {
+    color: #114b21;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.success-card p {
+    color: #1b5e20;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 6. Footer --- */
+footer {
+    background: var(--dark);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.6rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover { color: var(--primary); }
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-content h1 { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .menu-toggle { display: block; }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: left 0.4s ease;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        gap: 40px;
+    }
+    .nav-menu.active { left: 0; }
+    .nav-link { color: var(--dark); font-size: 1.4rem; }
+    #navbar:not(.scrolled) .menu-toggle { color: var(--white); }
+}
