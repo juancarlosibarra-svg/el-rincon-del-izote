@@ -8,7 +8,7 @@ Puedes degustar la experiencia en vivo haciendo clic aquí:
 
 ---
 
-## 👨‍🍳 El Menú de la Actividad (Indicaciones Cumplidas)
+## 👨‍🍳 El Menú de la Actividad (
 
 Este proyecto fue cocinado desde cero siguiendo las recetas y pautas estrictas de la rúbrica de evaluación:
 
@@ -19,7 +19,7 @@ Este proyecto fue cocinado desde cero siguiendo las recetas y pautas estrictas d
 
 ---
 
-## 🏗️ La Receta Semántica (Estructura Obligatoria HTML5)
+## 🏗️ La Receta Semántica 
 
 La arquitectura de nuestro código `index.html` respeta la estructura tradicional exigida para una maquetación profesional y accesible:
 
